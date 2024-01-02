@@ -30,6 +30,10 @@ const onChange = (e) => {
 
 </script>
 <template>
-    <input class="w-full h-screen rounded-lg border-2 border-solid border-gray-600" :type="props.type"
-        :placeholder="props.placeholder" v-model="props.value" @change="onChange" />
+    <input class="w-[300px] h-[80px] rounded-lg border-2 border-solid border-gray-600" 
+    :type="props.type"
+    :placeholder="props.placeholder" 
+    v-model="props.value" 
+    @change="onChange" />
 </template>
+
