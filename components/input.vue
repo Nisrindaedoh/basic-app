@@ -1,4 +1,6 @@
 <script setup>
+import { stringify } from 'postcss';
+
 const props = defineProps({
     id: {
         type: String,
@@ -7,6 +9,10 @@ const props = defineProps({
     name: {
         type: String,
         default: "text",
+    },
+    classStyle: {
+        type: String,
+        default: "w-[300px] h-[80px] rounded-lg border-2 border-solid border-gray-600"
     },
     type: {
         type: String,
@@ -30,10 +36,12 @@ const onChange = (e) => {
 
 </script>
 <template>
-    <input class="w-[300px] h-[80px] rounded-lg border-2 border-solid border-gray-600" 
-    :type="props.type"
-    :placeholder="props.placeholder" 
-    v-model="props.value" 
-    @change="onChange" />
+    <input 
+        :class="props.classStyle" 
+        :type="props.type" 
+        :placeholder="props.placeholder" 
+        v-model="props.value"
+        @change="onChange" 
+    />
 </template>
 

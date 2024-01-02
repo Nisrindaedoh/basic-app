@@ -23,50 +23,32 @@ const onChange = (e, name) => {
     <div class="w-full h-screen flex gap-4 items-center justify-center">
         <Input
         :type="type" 
-        id="firstName" 
-        name="firstName" 
-        :placeholder="placeholder" 
-        :value="form.firstName"
-        :onChange="onChange" 
-        class="first-name-input" />
+          id="firstName" 
+          name="firstName" 
+          :placeholder="placeholder" 
+          :value="form.firstName"
+          :onChange="onChange" 
+          classStyle="w-[300px] h-[80px] rounded-lg border-2 border-solid border-gray-600 bg-[#FF33FF]" 
+        />
        
         <Input 
-        :type="type" 
-        id="lastName" 
-        name="lastName" 
-        :placeholder="placeholder" 
-        :value="form.lastName"
-        :onChange="onChange" 
-        class="last-name-input" />
+          :type="type" 
+          id="lastName" 
+          name="lastName" 
+          :placeholder="placeholder" 
+          :value="form.lastName"
+          :onChange="onChange" 
+          classStyle="w-[300px] h-[80px] rounded-lg border-2 border-solid border-gray-600 bg-[#FF33CC]" 
+        />
        
         <Input 
-        :type="type" 
-        id="number" 
-        name="number" 
-        :placeholder="placeholder" 
-        :value="form.number"
-        :onChange="onChange" 
-        class="number-input" />
+          :type="type" 
+          id="number" 
+          name="number" 
+          :placeholder="placeholder" 
+          :value="form.number"
+          :onChange="onChange" 
+          classStyle="w-[300px] h-[80px] rounded-lg border-2 border-solid border-gray-600 bg-[#FF0099]" 
+        />
 </div>
 </template>
-
-<style scoped>
-  .first-name-input {
-    padding: 5px;
-    margin-bottom: 10px;
-    background-color: #d297c0;
-   
-  }
-
-  .last-name-input {
-    padding: 8px;
-    margin-bottom: 12px;
-    background-color: #c32ab9;
-  }
-
-  .number-input {
-    padding: 6px;
-    margin-bottom: 8px;
-    background-color: #9e2d80;
-  }
-</style>
